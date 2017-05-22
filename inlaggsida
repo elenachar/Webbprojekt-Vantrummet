@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html> 
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<script src="js/javascript.js"></script>
+
+
+	</head> 
+
+	<body>
+		
+		<form name="myForm" onsubmit="return validateForm()" method="post">
+				<label for="namn">Namn</label> </br>
+				<input type="text" name="namn" placeholder="Ditt namn..."> </br>
+				
+				
+				<label for="inlagg">Inlägg</label>  </br>
+				<textarea name="inlagg" rows="17" cols="50" placeholder="Dela med dig av din erfarenhet här..."></textarea> </br>
+				
+				<label for="mail">Mejladress</label> </br>
+				<input type="text" name="mail" placeholder="Din mejladress..."> </br>
+				<!-- HÄR MÅSTE VI PÅ NÅGOT SÄTT GÖRA SÅ ATT MAN KAN VÄLJA TAGGAR FÖR SITT INLÄGG-->
+				
+				<input type="submit" value="Lägg upp inlägg">
+		</form>
+
+	</body> 
+
+</html>
+

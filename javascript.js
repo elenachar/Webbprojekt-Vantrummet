@@ -1,7 +1,7 @@
 function validateForm() {
   var x = document.forms["myForm"]["namn"].value.trim();
-  var y = document.forms["myForm"]["email"].value.trim();
-  var z = document.forms["myForm"]["kommentar"].value.trim();
+  var y = document.forms["myForm"]["mail"].value.trim();
+  var z = document.forms["myForm"]["inlagg"].value.trim();
   var at = y.indexOf("@");
   var dot = y.indexOf(".");
 

@@ -1,0 +1,49 @@
+input[type=text],input[type=password], select {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit],button[type=submit] {
+    width: 15%;
+    background-color: #F00101;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+textarea{
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[value="Submit"],input[value="Login"]{
+    font-size: 30px;
+    font-family: arial;
+}
+
+input[type=submit]:hover {
+    background-color: #FF0000;
+}
+
+
+textarea[placeholder], body{
+    font-family: georgia;
+}
+
+input[name="username"], input[type=password]{
+  width: 20%;
+}
+
