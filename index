@@ -2,7 +2,8 @@
 <html> 
 
 	<head>
-		
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<script src="js/javascript.js"></script>
 
 
 	</head> 
