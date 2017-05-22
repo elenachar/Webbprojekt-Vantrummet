@@ -6,18 +6,18 @@ function validateForm() {
   var dot = y.indexOf(".");
 
     if (x == "") {
-        alert("Name must be filled out"); 
+        alert("Namnet är inte skrivet"); 
     }
     else if (z == "") {
-        alert("no comment written");
+        alert("Inlägget är inte skrivet");
     }
     else if (y == ""){
-        alert("Email address must be filled out");
+        alert("Mejladressen är inte skriven");
     }
   
 
 if (at == -1 || dot == -1 || !(/\S+@\S+\.\S+/)){
-    alert("wrong email format");
+    alert("fel mejlformat");
   }
 else{
   return true;
