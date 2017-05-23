@@ -3,8 +3,24 @@ textarea[placeholder], input, body {
     text-align: center;
 }
 
+#login {
+    width: 10px;
+    height: 10px;
+    float: top right;
+}
+
+.icon { /* Customizes all icons at once */
+    display: inline-block;
+    margin: 3%;
+    width: 13%;
+}
+
+.icon:hover {
+    width: 16%;  
+}
+
 #label {
-    margin-top: 30px;
+    margin-top: 30px; /*Funkar inte som det ska!! Jävla hårballe!*/
     font-size: 30px;
 }
 
@@ -19,32 +35,24 @@ input[type=text] {
     font-size: 1em;
 }
 
+#taggar {
+    width: 86%;
+    margin-left: 7%;
+}
+
 input[type=submit], button {
     font-size: 1em;
-    padding: 10px 20px;
-    margin: 8px 0;
-    border: solid;
-    border-radius: 50px;
+    padding: 10px 15px;
+    border: 0.1em solid black;
+    border-radius: 20px;
     cursor: pointer;
-}
-
-.rödKnappar {
-    border-color: #F00101;
-    color: #F00101;
-    background-color: white;
-}
-
-.rödKnappar:hover {
-    background-color: #F00101;
-    color: white;
 }
 
 .orangeKnapp {
     background-color: #ffbf80;
     color: white;
     border-color: #ffbf80;
-    padding-top: 12px;
-    padding-bottom: 12px;   
+    margin: 2.5px 0px;
 }
 
 .orangeKnapp:hover {
@@ -53,19 +61,14 @@ input[type=submit], button {
 }
 
 .svartKnapp {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     border-color: black;
     padding-top: 12px;
     padding-bottom: 12px; 
 }
 
 .svartKnapp:hover {
-    background-color: white;
-    color: black;
-}
-
-#taggar {
-    width: 80%;
-    margin-left: 10%;
+    background-color: black;
+    color: white;
 }
