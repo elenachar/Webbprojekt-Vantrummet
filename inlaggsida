@@ -10,17 +10,56 @@
 	</head> 
 
 	<body>
+    
+        <div>
+            <button class="orangeKnapp" type="button">Ny erfarenhet</button>
+            <button class="orangeKnapp" type="button">Sök</button>
+            <button class="orangeKnapp" type="button">Mina inlägg</button>
+        </div>
 		
 		<form name="myForm" onsubmit="return validateForm()" method="post">
 				
-                <label for="namn">Separera sökord med mellanslag</label> </br>
+                <label for="namn"><span id="label">Separera sökord med mellanslag</span></label> </br>
 				<input type="text" name="namn" placeholder="Ex. Trött Huvudvärk Yrsel" autofocus> </br>
                 
                 <div id="taggar">             
-                    <button type="button">#TAGG</button> 
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
+                    <button class="rödKnappar" type="button">#TAGG</button>
                 </div>
 				
-				<input type="submit" value="#TAGG">
+				<input class="svartKnapp" type="submit" value="Sök">
                 
 		</form>
         

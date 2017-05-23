@@ -3,8 +3,9 @@ textarea[placeholder], input, body {
     text-align: center;
 }
 
-label {
-    font-size; 30px;
+#label {
+    margin-top: 30px;
+    font-size: 30px;
 }
 
 input[type=text] {
@@ -19,22 +20,52 @@ input[type=text] {
 }
 
 input[type=submit], button {
-    color: #F00101;
     font-size: 1em;
-    background-color: white;
     padding: 10px 20px;
     margin: 8px 0;
-    border: solid #F00101;
+    border: solid;
     border-radius: 50px;
     cursor: pointer;
 }
 
-input[type=submit]:hover, button:hover {
+.rödKnappar {
+    border-color: #F00101;
+    color: #F00101;
+    background-color: white;
+}
+
+.rödKnappar:hover {
     background-color: #F00101;
     color: white;
 }
 
-input[type=submit]:active, button:active {
-    background-color: #F00101;
+.orangeKnapp {
+    background-color: #ffbf80;
     color: white;
+    border-color: #ffbf80;
+    padding-top: 12px;
+    padding-bottom: 12px;   
+}
+
+.orangeKnapp:hover {
+    background-color: white;
+    color: #ffbf80;
+}
+
+.svartKnapp {
+    background-color: black;
+    color: white;
+    border-color: black;
+    padding-top: 12px;
+    padding-bottom: 12px; 
+}
+
+.svartKnapp:hover {
+    background-color: white;
+    color: black;
+}
+
+#taggar {
+    width: 80%;
+    margin-left: 10%;
 }
