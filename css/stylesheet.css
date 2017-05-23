@@ -1,49 +1,40 @@
-input[type=text],input[type=password], select {
-    width: 40%;
+textarea[placeholder], input, body {
+    font-family: georgia;
+    text-align: center;
+}
+
+label {
+    font-size; 30px;
+}
+
+input[type=text] {
+    width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: 1em;
 }
 
-input[type=submit],button[type=submit] {
-    width: 15%;
-    background-color: #F00101;
-    color: white;
+input[type=submit], button {
+    color: #F00101;
+    font-size: 1em;
+    background-color: white;
     padding: 10px 20px;
     margin: 8px 0;
-    border: none;
+    border: solid #F00101;
     border-radius: 50px;
     cursor: pointer;
 }
 
-textarea{
-    width: 40%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+input[type=submit]:hover, button:hover {
+    background-color: #F00101;
+    color: white;
 }
 
-input[value="Submit"],input[value="Login"]{
-    font-size: 30px;
-    font-family: arial;
+input[type=submit]:active, button:active {
+    background-color: #F00101;
+    color: white;
 }
-
-input[type=submit]:hover {
-    background-color: #FF0000;
-}
-
-
-textarea[placeholder], body{
-    font-family: georgia;
-}
-
-input[name="username"], input[type=password]{
-  width: 20%;
-}
-
