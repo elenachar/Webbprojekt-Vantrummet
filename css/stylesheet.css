@@ -1,5 +1,5 @@
 .img-container{
-    margin:0;
+    margin-bottom:100px; /* bra om vi ändrar detta sen till typ em eller %, problem är att det blir "för responsivt" */
     height: 10em;
     width:100%; 
 
