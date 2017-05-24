@@ -5,6 +5,18 @@
 
 }
 
+.text-div{
+    margin:2em;
+}
+
+.valkommen{
+    margin: 0;
+}
+
+.om_oss{
+    margin:0;
+}
+
 textarea[placeholder], input, body {
     font-family: georgia;
     text-align: center;
@@ -20,7 +32,7 @@ textarea[placeholder], input, body {
     display: inline-block;
     margin: 3%;
     width: 13%;
-    
+
 }
 
 .icon:hover {
