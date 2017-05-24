@@ -1,22 +1,69 @@
-textarea[placeholder], input, body {
-    font-family: georgia;
+body {
+    background-image: url(light_grey.png);
+    background-attachment: fixed;
+}
+
+#flöde {
+    font-size: 100%;
+    width: 80%;
+    height: 100vw;
+    background-color: rgb(255, 255, 255, 0.3);
+    margin-left: 10%;
+}
+
+textarea[placeholder], input, button, body {
+    font-family: Georgia;
     text-align: center;
 }
 
-#login {
-    width: 10px;
-    height: 10px;
-    float: top right;
+header {
+    position: fixed;
+    width: 100%;
 }
 
-.icon { /* Customizes all icons at once */
+#meny {
+    clear: both;
+    position: relative;
+    width: 70%;
+    height: 15%;
+    max-width: 500px;
+    margin-left: 15%;
+    padding-top: 15%;
+    padding-bottom: 5%;
+}
+
+.icon {
     display: inline-block;
-    margin: 3%;
-    width: 13%;
+    float: left;
+    padding: 3%;
+    width: 20%;
 }
 
-.icon:hover {
-    width: 16%;  
+.icon:hover, icon:active {
+    width: 26%;
+    padding: 0%;
+}
+
+#loginIcon {
+    float: right;
+    margin-right: 4%;
+    width: 35px;
+}
+
+#chairIcon {
+    float: left;
+    max-width: 200px;
+    opacity: 0.4;
+}
+
+h1 {
+    position: absolute;
+    margin: 3px 25px;
+    font-size: 4em;
+    font-family: 'Cabin Sketch', cursive;
+    color: #ff7733;
+    opacity: 1;
+    z-index: 1;
 }
 
 #label {
@@ -27,12 +74,13 @@ textarea[placeholder], input, body {
 input[type=text] {
     width: 60%;
     padding: 12px 20px;
-    margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 0.1em solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-family: 'Architects Daughter', cursive;
     font-size: 1em;
+    margin-bottom: 2%;
 }
 
 #taggar {
@@ -41,34 +89,54 @@ input[type=text] {
 }
 
 input[type=submit], button {
+    font-family: 'Architects Daughter', cursive;
     font-size: 1em;
-    padding: 10px 15px;
-    border: 0.1em solid black;
-    border-radius: 20px;
+    border: 0.1em;
+    border-style: solid;
     cursor: pointer;
 }
 
 .orangeKnapp {
-    background-color: #ffbf80;
-    color: white;
+    background-color: rgb(255, 255, 255, 0.5);
+    color: #ffbf80;
     border-color: #ffbf80;
+    border-radius: 20px;
     margin: 2.5px 0px;
+    padding: 5px 10px;
 }
 
 .orangeKnapp:hover {
-    background-color: white;
-    color: #ffbf80;
+    background-color: #ffbf80;
+    color: white;
 }
 
 .svartKnapp {
-    background-color: white;
-    color: black;
-    border-color: black;
-    padding-top: 12px;
-    padding-bottom: 12px; 
+    width: 5%;
+    margin-left: -10px;
+    background-color: lightgray;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 2%;
+    padding: 10px 20px;
 }
 
 .svartKnapp:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: lightgray;
+}
+
+@media only screen and (max-width: 800px) {
+
+    h1 { font-size: 2.9em; }
+    #chairIcon { max-width: 150px; }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    h1 { font-size: 2em; }
+    #chairIcon { max-width: 100px; }
+
 }
