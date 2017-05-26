@@ -6,13 +6,22 @@ body {
 #flöde {
     font-size: 100%;
     width: 80%;
-    height: 100vw;
+    height: 100vw; /* ändra på */
     background-color: rgb(255, 255, 255, 0.3);
     margin-left: 10%;
 }
 
 textarea[placeholder], input, button, body {
     font-family: Georgia;
+}
+
+.omOss {
+    padding: 10% 20% 30px 20%; /* Top Right Bottom Left */
+    font-style: italic;
+}
+
+textarea[placeholder], input, body {
+    font-family: georgia;
     text-align: center;
 }
 
@@ -21,7 +30,7 @@ header {
     width: 100%;
 }
 
-#meny {
+/*#meny {
     clear: both;
     position: relative;
     width: 70%;
@@ -30,18 +39,15 @@ header {
     margin-left: 15%;
     padding-top: 15%;
     padding-bottom: 5%;
-}
+}*/
 
 .icon {
     display: inline-block;
-    float: left;
-    padding: 3%;
     width: 20%;
+    margin: 
 }
 
 .icon:hover, icon:active {
-    width: 26%;
-    padding: 0%;
 }
 
 #loginIcon {
@@ -64,11 +70,6 @@ h1 {
     color: #ff7733;
     opacity: 1;
     z-index: 1;
-}
-
-#label {
-    margin-top: 30px; /*Funkar inte som det ska!! Jävla hårballe!*/
-    font-size: 30px;
 }
 
 input[type=text] {
