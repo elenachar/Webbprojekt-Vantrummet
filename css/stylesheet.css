@@ -72,16 +72,53 @@ h1 {
     z-index: 1;
 }
 
-input[type=text] {
-    width: 60%;
-    padding: 12px 20px;
-    display: inline-block;
-    border: 0.1em solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+.sökfält {
     font-family: 'Architects Daughter', cursive;
     font-size: 1em;
-    margin-bottom: 2%;
+    color: lightgray;
+    background-color: white;
+    border: 0.1em solid #ccc;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.sökfält .tagg {
+    padding: 0.25em 0.5em;
+    margin: 0.25em 0em 0.25em 0.25em;
+    display: inline-block;
+    border: 0.1em solid lightgray;
+    border-radius: 4px;
+    transition: all 0.1s linear;
+}
+
+.sökfält .tagg:hover {
+    border-color: gray;
+    color: gray;
+    cursor: pointer;
+}
+
+.sökfält .tagg .stäng::after {
+    content: 'x';
+    font-weight: lighter;
+    display: inline-block;
+    transform: scale(1.4);
+    margin-left: 0.5em;
+}
+
+.sökfält .tagg .stäng:hover::after {
+    content: 'X';
+    font-weight: bold;
+}
+
+.textinput {
+    border: none;
+    outline: none;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1em;
+    text-align: left;
+    color: gray;
+    margin: 0.5em 0em;
+    padding-left: 0.5em;
 }
 
 #taggar {
@@ -95,6 +132,7 @@ input[type=submit], button {
     border: 0.1em;
     border-style: solid;
     cursor: pointer;
+    transition: all 0.1s linear;
 }
 
 .orangeKnapp {
