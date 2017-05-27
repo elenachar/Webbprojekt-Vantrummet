@@ -79,9 +79,5 @@ function moveNumbers(tagg) {
     
     function filtreraTagg(tagg) {
         return tagg.replace(/[^\w]/g, '').trim();
-    }
-        
-    skapaTagg('Diabetes');
-    skapaTagg('Huvudvärk');
-    
+    }    
 });
