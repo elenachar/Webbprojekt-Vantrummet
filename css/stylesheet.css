@@ -8,8 +8,6 @@ body {
     width: 80%;
     background-color: rgb(255, 255, 255, 0.3);
     margin-left: 10%;
-	
-	
 }
 
 textarea[placeholder], input, button, body {
@@ -185,7 +183,6 @@ input[type=submit], button {
 
     h1 { font-size: 2em; }
     #chairIcon { max-width: 100px; }
-
 }
 
 .inlagg {
@@ -193,5 +190,4 @@ input[type=submit], button {
 	height:100px;
     padding: 12px 20px;
 	margin:3%;
-
  }
