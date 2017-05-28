@@ -6,9 +6,10 @@ body {
 #flöde {
     font-size: 100%;
     width: 80%;
-    height: 100vw; /* ändra på */
     background-color: rgb(255, 255, 255, 0.3);
     margin-left: 10%;
+	
+	
 }
 
 textarea[placeholder], input, button, body {
@@ -71,6 +72,13 @@ h1 {
     opacity: 1;
     z-index: 1;
 }
+
+input[type=text, type=email, type=password] {
+    width: 60%;
+	height:auto;
+    padding: 12px 20px;
+}
+   
 
 .sökfält {
     font-family: 'Architects Daughter', cursive;
@@ -179,3 +187,5 @@ input[type=submit], button {
     #chairIcon { max-width: 100px; }
 
 }
+
+
