@@ -23,7 +23,7 @@ include("conn.php");
 		}
 		return $tmp_salt; //turn the array into a string
 	}
-	$conn->query("INSERT INTO Kundinfo (Email,Losenord,Salt) VALUES ('$email','$salt_password','$salt')");
+	$conn->query("INSERT INTO Kundinfo (Anvandarnamn,Alder,Email,Admin) VALUES ('$username','$age','$email','')");
 	$conn->query("INSERT INTO Inlogg (Email,Losenord,Salt) VALUES ('$email','$salt_password','$salt')");
 		
 		if(!$conn){

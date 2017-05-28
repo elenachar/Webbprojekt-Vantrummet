@@ -1,3 +1,4 @@
+
 <?php
 	include("conn.php");
 	if(isset($conn)){
@@ -6,12 +7,12 @@
 			$pass = trim($_POST['password']);
 			$email = $_POST['email'];
 			$password = $_POST['password'];
-			$sql_db_password = "SELECT Losenord FROM Kundinfo WHERE Email = '$email'";    
+			$sql_db_password = "SELECT Losenord FROM Inlogg WHERE Email = '$email'";    
 			$db_password = mysqli_fetch_assoc(mysqli_query($conn, $sql_db_password));
 			
 			
 			//$salt_db_password = 
-			$salt = "SELECT Salt FROM Kundinfo WHERE Email = '$email'";  
+			$salt = "SELECT Salt FROM Inlogg WHERE Email = '$email'";  
 			$salt_db = mysqli_fetch_assoc(mysqli_query($conn, $salt));
 			$salt_password = md5($password.$salt_db["Salt"]);
 		}
@@ -21,7 +22,7 @@
 	if ($salt_password == $db_password["Losenord"]){
 		echo '<script language="javascript">';
 		echo 'alert("Logged in");';
-		//echo 'window.location.href="inloggad_index.php";';
+		echo 'window.location.href="index.php";';
 		echo '</script>';
 		session_start();
 		$_SESSION['logged in'] = $email;
@@ -33,8 +34,6 @@
 		echo 'window.location.href="login.php";';
 		echo '</script>';
 		}
-		
-		//echo $_SESSION['logged in'];
-		
+	
 
 	?>
