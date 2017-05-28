@@ -1,5 +1,7 @@
 <?php
+
 include_once("conn.php");
+
 	$sokord = $_POST["sökfält"];
 	
 	
@@ -9,6 +11,8 @@ include_once("conn.php");
 				WHERE InlaggID.inlaggtaggtabell IN(SELECT * 
 										FROM Inlaggstaggar AS inlaggtaggtabell
 										WHERE TaggID.inlaggtaggtabell  = $sokord) = InlaggID.inlaggtabell");
+
 										
 	header('Location: index.html'); 
+
 ?>

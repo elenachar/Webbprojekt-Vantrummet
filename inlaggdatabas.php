@@ -3,6 +3,7 @@
 include ("conn.php");
 
 
+
 $email = ($_SESSION['email']);
 $sql = "SELECT KundID FROM Kundinfo WHERE email = '$email'";
 var_dump($sql);
@@ -13,9 +14,7 @@ var_dump($sql);
 	if(!$conn){
 		echo '<script language="javascript">';
 		echo 'alert("Failed to post");';
-		echo 'window.location.href="index.html";';
-		echo '</script>';
-		}
+		echo 'window.location.href="index.html";'
 		else {
 		echo '<script language="javascript">';
 		echo 'alert("Posted!");';

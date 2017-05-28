@@ -11,7 +11,7 @@
 
 <form  name="loginForm" method= "POST" action = "salt_login.php">
 		<label>email</label>
-		<input type="email" placeholder="Din Emailadress.." name="email" required>
+		<input type="text" placeholder="Din Emailadress.." name="email" required>
 
 		<label>Password</label>
 		<input type="password" placeholder="Ditt lösenord.." name="password" required>

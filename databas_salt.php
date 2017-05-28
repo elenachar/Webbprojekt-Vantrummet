@@ -1,15 +1,9 @@
 <?php
-
-include ("conn.php");
-
-
-
-
+include("conn.php");
 	$email = $_POST["email"];
 	$username= $_POST["randomfield"];
 	$age = $_POST["age"];
 	$password = $_POST['password'];
-
 	
 	
 		$salt = randomPassword();
@@ -29,8 +23,8 @@ include ("conn.php");
 		}
 		return $tmp_salt; //turn the array into a string
 	}
-
-	$conn->query("INSERT INTO Kundinfo (Inlogg,Losenord,Salt, Email, Age) VALUES ('$username','$salt_password','$salt','$email','$age')");
+	$conn->query("INSERT INTO Kundinfo (Email,Losenord,Salt) VALUES ('$email','$salt_password','$salt')");
+	$conn->query("INSERT INTO Inlogg (Email,Losenord,Salt) VALUES ('$email','$salt_password','$salt')");
 		
 		if(!$conn){
 		echo '<script language="javascript">';
@@ -41,13 +35,16 @@ include ("conn.php");
 		else {
 		echo '<script language="javascript">';
 		echo 'alert("Registration succeeded");';
-		echo 'window.location.href="index.html";';
+		echo 'window.location.href="inloggad_index.php";';
 		echo '</script>';
 		
 		}
-	
-	
-	
-	header('Location: index.html');
+		
+		session_start();
+		$_SESSION['logged in'] = $email;
 
-	?>
+
+
+		
+		
+?>
