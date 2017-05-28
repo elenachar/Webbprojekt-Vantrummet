@@ -1,4 +1,3 @@
-
 <?php
 	include("conn.php");
 	$email = $_POST['email'];
@@ -26,3 +25,10 @@
 	
 	
 	
+
+<?php
+include("conn.php");
+	
+	
+	header('Location: index.html');
+	?>
