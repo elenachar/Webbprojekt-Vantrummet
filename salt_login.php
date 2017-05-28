@@ -1,23 +1,25 @@
 
 <?php
 	include("conn.php");
-	$email = $_POST['email'];
-	$password = $_POST['password'];
-	$db_password = ("SELECT Losenord FROM Kundinfo WHERE Email = '$email'");    
-	//$salt_db_password = 
-	$salt = "SELECT Salt FROM Kundinfo WHERE Email = '$email'";  
-	$salt_password = md5($password.$salt);
-	
-	
-	//echo($email); 
-	//echo($password);
-	echo ($db_password); 
-	echo($salt); 
-	//echo($salt_password);
+	if(isset($conn)){
+		if(isset($_POST['email'])){
+			$email = trim($_POST['email']);
+			$pass = trim($_POST['password']);
+			$email = $_POST['email'];
+			$password = $_POST['password'];
+			$sql_db_password = "SELECT Losenord FROM Kundinfo WHERE Email = '$email'";    
+			$db_password = mysqli_fetch_assoc(mysqli_query($conn, $sql_db_password));
+			
+			
+			//$salt_db_password = 
+			$salt = "SELECT Salt FROM Kundinfo WHERE Email = '$email'";  
+			$salt_db = mysqli_fetch_assoc(mysqli_query($conn, $salt));
+			$salt_password = md5($password.$salt_db["Salt"]);
+		}
+	}
 
-	
 
-	if ($salt_password == $db_password){
+	if ($salt_password == $db_password["Losenord"]){
 		echo '<script language="javascript">';
 		echo 'alert("Logged in");';
 		echo 'window.location.href="inloggad_index.php";';
