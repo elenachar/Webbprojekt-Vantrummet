@@ -1,31 +1,4 @@
-<<<<<<< HEAD
 
-function validateForm() {
-  var x = document.forms["myForm"]["namn"].value.trim();
-  var y = document.forms["myForm"]["mail"].value.trim();
-  var z = document.forms["myForm"]["inlagg"].value.trim();
-  var at = y.indexOf("@");
-  var dot = y.indexOf(".");
-
-    if (x == "") {
-        alert("Namnet är inte skrivet"); 
-    }
-    else if (z == "") {
-        alert("Inlägget är inte skrivet");
-    }
-    else if (y == ""){
-        alert("Mejladressen är inte skriven");
-    }
-  
-
-if (at == -1 || dot == -1 || !(/\S+@\S+\.\S+/)){
-    alert("fel mejlformat");
-  }
-else{
-  return true;
-}
-
-}
 
 function moveNumbers(tagg) {
     var txt = document.getElementById("sökbar").value;
@@ -33,8 +6,7 @@ function moveNumbers(tagg) {
     document.getElementById("sökbar").value = txt;
 }
 
-=======
->>>>>>> 5c732b52a99840a57a617481943d7171483d07f6
+
 [].forEach.call(document.getElementsByClassName('sökfält'), function (element) {
     var doldInput = document.createElement('input');
     var huvudinput = document.createElement('input');
@@ -114,8 +86,7 @@ function moveNumbers(tagg) {
         return tagg.replace(/[^\w]/g, '').trim();
     }    
 });
-<<<<<<< HEAD
-=======
+
 
 function moveNumbers(tagg) {
     var txt = document.getElementById("sökbar").value;
@@ -126,4 +97,4 @@ function moveNumbers(tagg) {
     var event = new Event('input');
     elem.dispatchEvent(event);
 }
->>>>>>> 5c732b52a99840a57a617481943d7171483d07f6
+
