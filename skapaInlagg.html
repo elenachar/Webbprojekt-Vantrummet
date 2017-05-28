@@ -31,7 +31,7 @@
             </div>
         </div>
         
-        <form  name="inlaggForm" method= "POST">
+        <form  name="inlaggForm" method= "POST" action="inlaggdatabas.php">
 
 		
 		
@@ -39,11 +39,10 @@
 		
 		
 		
-		<label>Erfarenhet</label>
-		<input type="text" rows="20" cols="50" placeholder="Skriv din vårderfarenhet här.." name="inlagg" class="inlagg"required> <br>
+		<input type="text" rows="20" cols="50" placeholder="Skriv din vårderfarenhet här.." name="inlagg" class="inlagg" required> <br>
 		
-		<label>Taggar</label> <br>
-		  
+		<div class="taggar"> <label>Taggar</label> </div> <br>
+		
 	
 		<button type="submit" name="post"> Lägg upp</button>
 </form>

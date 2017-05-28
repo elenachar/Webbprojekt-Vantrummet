@@ -1,3 +1,12 @@
+
+
+function moveNumbers(tagg) {
+    var txt = document.getElementById("sökbar").value;
+    txt += tagg + " ";
+    document.getElementById("sökbar").value = txt;
+}
+
+
 [].forEach.call(document.getElementsByClassName('sökfält'), function (element) {
     var doldInput = document.createElement('input');
     var huvudinput = document.createElement('input');
@@ -78,6 +87,7 @@
     }    
 });
 
+
 function moveNumbers(tagg) {
     var txt = document.getElementById("sökbar").value;
     txt += tagg + " ";
@@ -87,3 +97,4 @@ function moveNumbers(tagg) {
     var event = new Event('input');
     elem.dispatchEvent(event);
 }
+

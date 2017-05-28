@@ -1,15 +1,9 @@
 <?php
-
 include("conn.php");
-
-
-include once("conn.php");
-
 	$email = $_POST["email"];
 	$username= $_POST["randomfield"];
 	$age = $_POST["age"];
 	$password = $_POST['password'];
-
 	
 	
 		$salt = randomPassword();
@@ -29,8 +23,8 @@ include once("conn.php");
 		}
 		return $tmp_salt; //turn the array into a string
 	}
-
-	$conn->query("INSERT INTO Kundinfo (Inlogg,Losenord,Salt, Email, Age) VALUES ('$username','$salt_password','$salt','$email','$age')");
+	$conn->query("INSERT INTO Kundinfo (Email,Losenord,Salt) VALUES ('$email','$salt_password','$salt')");
+	$conn->query("INSERT INTO Inlogg (Email,Losenord,Salt) VALUES ('$email','$salt_password','$salt')");
 		
 		if(!$conn){
 		echo '<script language="javascript">';
@@ -41,37 +35,16 @@ include once("conn.php");
 		else {
 		echo '<script language="javascript">';
 		echo 'alert("Registration succeeded");';
-		echo 'window.location.href="index.html";';
+		echo 'window.location.href="inloggad_index.php";';
 		echo '</script>';
-		//session_start();
 		
 		}
-	$md5_password = md5($password);
-	
+		
+		session_start();
+		$_SESSION['logged in'] = $email;
 
-	// Spara $md5_password i databasen
-	
-	var_dump(randomPassword());
+
+
 		
 		
-	
-	$salt_password = md5($password.$salt);
-	$password = $_POST['password'];
-	
-
-function randomPassword() {
-	$alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-	$alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
-	$salt = "";
-		
-	for ($i = 0; $i < 8; $i++) {
-		$n = rand(0, $alphaLength);
-		$salt .= $alphabet[$n];
-	}
-	return $salt; //turn the array into a string
-}
-	$conn->query("INSERT INTO Kundinfo (inlogg,losenord, email, age) VALUES ('$username','$salt_password','$email', '$age')");
-	
-	header('Location: index.html');
-
-	?>
+?>

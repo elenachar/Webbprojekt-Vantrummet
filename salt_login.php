@@ -1,16 +1,31 @@
 <?php
 	include("conn.php");
-	$email = $_POST['email'];
-	$password = $_POST['password'];
+	if(isset($conn)){
+		if(isset($_POST['email'])){
+			$email = trim($_POST['email']);
+			$pass = trim($_POST['password']);
+			$email = $_POST['email'];
+			$password = $_POST['password'];
+			$sql_db_password = "SELECT Losenord FROM Kundinfo WHERE Email = '$email'";    
+			$db_password = mysqli_fetch_assoc(mysqli_query($conn, $sql_db_password));
+			
+			
+			//$salt_db_password = 
+			$salt = "SELECT Salt FROM Kundinfo WHERE Email = '$email'";  
+			$salt_db = mysqli_fetch_assoc(mysqli_query($conn, $salt));
+			$salt_password = md5($password.$salt_db["Salt"]);
+		}
+	}
 
-	//$sql_command = "select * from User where email = '" . $email; $sql_command .= "' AND password = '" . $password . "'";
-	$salt = "SELECT salt FROM User WHERE email = '$email'";
-	$salt_password = md5($password.$salt);
-	if ($salt_password == $password){
+
+	if ($salt_password == $db_password["Losenord"]){
 		echo '<script language="javascript">';
 		echo 'alert("Logged in");';
-		echo 'window.location.href="index2.php";';
+		//echo 'window.location.href="inloggad_index.php";';
 		echo '</script>';
+		session_start();
+		$_SESSION['logged in'] = $email;
+		
 		}
 	else{
 		echo '<script language="javascript">';
@@ -18,17 +33,8 @@
 		echo 'window.location.href="login.php";';
 		echo '</script>';
 		}
+		
+		//echo $_SESSION['logged in'];
+		
 
-	
-
-	?>
-	
-	
-	
-
-<?php
-include("conn.php");
-	
-	
-	header('Location: index.html');
 	?>

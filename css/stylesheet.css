@@ -183,5 +183,11 @@ input[type=submit], button {
 
     h1 { font-size: 2em; }
     #chairIcon { max-width: 100px; }
-
 }
+
+.inlagg {
+	width: 50%;
+	height:100px;
+    padding: 12px 20px;
+	margin:3%;
+ }
