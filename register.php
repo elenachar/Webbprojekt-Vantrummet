@@ -48,7 +48,6 @@ if(empty($email))
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 <script src="js/regvalidering.js"></script>
 
-<link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
 
 <script language="javascript" type="text/javascript">
 function randomString() {
@@ -67,7 +66,7 @@ function randomString() {
 
 <form  name="registerForm" method= "POST" action = "databas_salt.php">
 
-<form  name="registerForm" method= "POST" action = "databas_salt.php" >
+
 
 
 		<input type="button" value="Get username" onClick="randomString();">&nbsp;
@@ -89,19 +88,7 @@ function randomString() {
 	
 		<button type="submit" name="register" >Register</button>
 
-		<input type="text" class="userLogin" placeholder="Enter Email" name="email" required>
 		
-		
-		<label>Password</label>
-		<input type="password" placeholder="Enter Password" name="password" required>
-		
-		<label>Age</label>
-		  <input type="radio" name="age" value="12-20"> 12-20<br>
-		  <input type="radio" name="age" value="21-35"> 21-35<br>
-		  <input type="radio" name="age" value="36-50"> 36-50 <br>
-		  <input type="radio" name="age" value="51+"> 51+
-	
-		<button type="submit">Register</button>
 
 </form>
 

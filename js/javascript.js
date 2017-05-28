@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 function validateForm() {
   var x = document.forms["myForm"]["namn"].value.trim();
   var y = document.forms["myForm"]["mail"].value.trim();
@@ -26,9 +26,6 @@ else{
 
 }
 
-$_SESSION[''] = 
-
-=======
 function moveNumbers(tagg) {
     var txt = document.getElementById("sökbar").value;
     txt += tagg + " ";
@@ -112,4 +109,3 @@ function moveNumbers(tagg) {
         return tagg.replace(/[^\w]/g, '').trim();
     }    
 });
->>>>>>> b9f01ead8b85c3a0cf7046be11618e940fc1729f
