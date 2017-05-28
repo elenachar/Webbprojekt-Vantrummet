@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 function validateForm() {
   var x = document.forms["myForm"]["namn"].value.trim();
@@ -32,6 +33,8 @@ function moveNumbers(tagg) {
     document.getElementById("sökbar").value = txt;
 }
 
+=======
+>>>>>>> 5c732b52a99840a57a617481943d7171483d07f6
 [].forEach.call(document.getElementsByClassName('sökfält'), function (element) {
     var doldInput = document.createElement('input');
     var huvudinput = document.createElement('input');
@@ -42,7 +45,9 @@ function moveNumbers(tagg) {
     
     huvudinput.setAttribute('type', 'text');
     huvudinput.setAttribute('id', 'sökbar');
+    huvudinput.setAttribute('autofocus', 'autofocus');
     huvudinput.classList.add('textinput');
+    
     huvudinput.addEventListener('input', function () {
         
         var skrivenTagg = huvudinput.value.split(' ');
@@ -109,3 +114,16 @@ function moveNumbers(tagg) {
         return tagg.replace(/[^\w]/g, '').trim();
     }    
 });
+<<<<<<< HEAD
+=======
+
+function moveNumbers(tagg) {
+    var txt = document.getElementById("sökbar").value;
+    txt += tagg + " ";
+    document.getElementById("sökbar").value = txt;
+    
+    var elem = document.getElementById('sökbar');
+    var event = new Event('input');
+    elem.dispatchEvent(event);
+}
+>>>>>>> 5c732b52a99840a57a617481943d7171483d07f6
