@@ -1,4 +1,3 @@
-
 <?php
 	include("conn.php");
 	if(isset($conn)){
@@ -22,8 +21,11 @@
 	if ($salt_password == $db_password["Losenord"]){
 		echo '<script language="javascript">';
 		echo 'alert("Logged in");';
-		echo 'window.location.href="inloggad_index.php";';
+		//echo 'window.location.href="inloggad_index.php";';
 		echo '</script>';
+		session_start();
+		$_SESSION['logged in'] = $email;
+		
 		}
 	else{
 		echo '<script language="javascript">';
@@ -31,5 +33,8 @@
 		echo 'window.location.href="login.php";';
 		echo '</script>';
 		}
+		
+		//echo $_SESSION['logged in'];
+		
 
 	?>
