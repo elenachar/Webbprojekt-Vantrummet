@@ -1,4 +1,4 @@
-function validateForm() {
+function registerForm() {
   var x = document.forms["myForm"]["namn"].value.trim();
   var y = document.forms["myForm"]["mail"].value.trim();
   var z = document.forms["myForm"]["inlagg"].value.trim();
