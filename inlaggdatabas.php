@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once("conn.php");
 
 
@@ -13,12 +13,12 @@ $sql = "SELECT KundID FROM Kundinfo WHERE email = '$email'";
 	if(!$conn){
 		echo '<script language="javascript">';
 		echo 'alert("Failed to post");';
-		echo 'window.location.href="index.html";';
+		echo 'window.location.href="index.php";';
 		}
 		else {
 		echo '<script language="javascript">';
 		echo 'alert("Posted!");';
-		echo 'window.location.href="index.html";';
+		echo 'window.location.href="index.php";';
 		echo '</script>';
 		
 		}

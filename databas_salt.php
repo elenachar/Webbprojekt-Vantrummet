@@ -35,13 +35,19 @@ include("conn.php");
 		else {
 		echo '<script language="javascript">';
 		echo 'alert("Registration succeeded");';
-		echo 'window.location.href="inloggad_index.php";';
+		
+		echo 'window.location.href="index.php";'; //ska vara index.php
 		echo '</script>';
 		
 		}
 		
+	$KundID = "SELECT KundID FROM Kundinfo WHERE Email = '$email'";
+	$KundID = mysqli_fetch_assoc(mysqli_query($conn, $KundID));
+		
 		session_start();
-		$_SESSION['logged in'] = $email;
+		$_SESSION['KundID'] = $KundID;
+		
+	
 
 
 
