@@ -10,5 +10,5 @@ include_once("conn.php");
 										FROM Inlaggstaggar AS inlaggtaggtabell
 										WHERE TaggID.inlaggtaggtabell  = $sokord) = InlaggID.inlaggtabell");
 
-	header('Location: index.html');
+	header('Location: index.php');
 ?>

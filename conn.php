@@ -7,6 +7,6 @@
 	$conn = new mysqli($servername, $username, $password, $username);
 	
 
-header("Location: index.html")
+header("Location: index.php")
 
 ?>

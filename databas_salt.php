@@ -35,7 +35,7 @@ include("conn.php");
 		else {
 		echo '<script language="javascript">';
 		echo 'alert("Registration succeeded");';
-		echo 'window.location.href="inloggad_index.php";';
+		echo 'window.location.href="index.php";';
 		echo '</script>';
 		
 		}
