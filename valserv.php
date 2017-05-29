@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 
 		$emailErr = "";
 			if (empty($_POST["email"])) {

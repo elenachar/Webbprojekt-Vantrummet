@@ -1,22 +1,29 @@
-<?php
+﻿<?php
 session_start();
-include_once("conn.php");
+include("conn.php");
 
 
-if (isset($_SESSION['email'])){
-$email = ($_SESSION['email']);
-$sql = "SELECT KundID FROM Kundinfo WHERE email = '$email'";
+if (isset($_SESSION['KundID'])){
+$kundid = ($_SESSION['KundID']);
+$kund = implode("",$kundid) +1;
+$kunda = (int)$kund;
+
+
 	$inlagg = $_POST["inlagg"];
-	 $taggar = $_POST["taggar"];
-	$conn->query("INSERT INTO Inlagg (InlaggID,InlaggText,KundID) VALUES ('','$inlagg','$sql')");
+	$taggar = $_POST["taggar"];
+	$conn->query("INSERT INTO Inlagg (InlaggID,InlaggText,KundID) VALUES ('','$inlagg','$kunda')");
 	$conn->query("INSERT INTO Taggar (TaggID,Taggnamn) VALUES ('','$taggar')");
+	//$inlaggid = $conn->query("SELECT InlaggID FROM Inlagg WHERE InlaggText = '$inlagg'");
+	//$taggid = $conn->query("SELECT TaggID FROM Taggar WHERE Taggnamn = '$taggar'");
+	
+	var_dump($inlaggid);
+	var_dump($taggid);
+	$conn->query("INSERT INTO Inlaggstaggar (TaggID,InlaggID) VALUES ('$taggid','$inlaggid')");
 	if(!$conn){
 		echo '<script language="javascript">';
 		echo 'alert("Failed to post");';
-
-
-		echo 'window.location.href="index.php";';
-
+		echo 'window.location.href="skapainlagg.php";';
+		echo '</script>';
 
 		}
 		else {
@@ -26,11 +33,5 @@ $sql = "SELECT KundID FROM Kundinfo WHERE email = '$email'";
 		echo '</script>';
 		
 		}
-	
-	
-
-	header('Location: index.php');
-
-}
-
+} 
 	?>

@@ -1,5 +1,5 @@
-<?php
-session_start();
+﻿<?php
+
 	$servername = "dbtrain.im.uu.se";
 	$username = "dbtrain_575";
 	$password = "dksdpt";
@@ -9,6 +9,6 @@ session_start();
 	
 	//var_dump($_SESSION['KundID']);
 
-header("Location: index.php")
+
 
 ?>

@@ -1,3 +1,4 @@
+﻿<?php session_start(); ?>
 <!DOCTYPE html>
 
 <html lang="sv"> 
@@ -11,34 +12,36 @@
 
 	<body>
     
-<div class="header"> Erfarenheter: </div>
+<div > Erfarenheter: </div>
 	
 	
 	<?php 
+	
 	include("conn.php");
-	$sokord = $_POST["sokord"];
-	$find_inlagg = mysqli_query($conn, "SELECT * 
-				FROM Inlagg AS inlaggtabell
-				WHERE InlaggID.inlaggtaggtabell IN(SELECT * 
-										FROM Inlaggstaggar AS inlaggtaggtabell
-										WHERE TaggID.inlaggtaggtabell  = $sokord) = InlaggID.inlaggtabell");
+	$sokord = $_GET["sokfalt"];
+	
+	$query = "SELECT Inlagg.InlaggText, Kundinfo.Anvandarnamn
+						FROM Inlagg
+						JOIN Kundinfo ON Kundinfo.KundID = Inlagg.KundID
+						JOIN Inlaggstaggar ON Inlagg.InlaggID = Inlaggstaggar.InlaggID
+						JOIN Taggar ON Taggar.TaggID = Inlaggstaggar.TaggID
+						WHERE '$sokord' = Taggar.Taggnamn";
+						
+		$result = $conn->query($query);				
 	
 	
-	
-	
-	
-	while($row = mysqli_fetch_assoc($find_inlagg))
-	{
-		$inlagg_name = $row['inlogg'];
-		$inlagg_text = $row['inlagg'];
-		echo '<div>';
-
-		echo '';
-		echo "$inlagg_name : <br> $inlagg_text<p>";
-		echo '</div>';
-	}
-	
+		while($row = $result->fetch_assoc())
+		{
+			$inlagg_name = $row['Anvandarnamn'];
+			$inlagg_text = $row['InlaggText'];
+			echo '<div>';
+			echo "<p>'$inlagg_name' : <br> '$inlagg_text'</p>";
+			echo '</div>';
+		}
+		
+		
 	?>
+	
 	</body> 
 
 </html>
