@@ -57,8 +57,10 @@ session_start();
            
 
                 
+
             <form name="myForm" action="sokresultat.php" method="get">
 					
+
                    
                    <div class="sökfält" data-name="sokfalt" >
                    </div>

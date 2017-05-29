@@ -25,6 +25,7 @@ $kunda = (int)$kund;
 		echo 'window.location.href="skapainlagg.php";';
 		echo '</script>';
 
+
 		}
 		else {
 		echo '<script language="javascript">';

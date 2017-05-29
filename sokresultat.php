@@ -16,6 +16,7 @@
 	
 	
 	<?php 
+
 	
 	include("conn.php");
 	$sokord = $_GET["sokfalt"];
@@ -42,6 +43,7 @@
 		
 	?>
 	
+
 	</body> 
 
-</html>
+</html> 
