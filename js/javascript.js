@@ -13,6 +13,7 @@ function moveNumbers(tagg) {
     var taggar = [];
     
     doldInput.setAttribute('type', 'hidden');
+	doldInput.setAttribute('id', 'sokord');
     doldInput.setAttribute('name', element.getAttribute('data-name'));
     
     huvudinput.setAttribute('type', 'text');

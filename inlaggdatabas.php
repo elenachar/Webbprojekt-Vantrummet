@@ -15,7 +15,7 @@ $sql = "SELECT KundID FROM Kundinfo WHERE email = '$email'";
 		echo 'alert("Failed to post");';
 
 
-		echo 'window.location.href="index.php";';
+		echo 'window.location.href="skapainlagg.php";';
 
 
 		}
