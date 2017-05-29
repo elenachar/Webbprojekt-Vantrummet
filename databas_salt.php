@@ -40,8 +40,13 @@ include("conn.php");
 		
 		}
 		
+	$KundID = "SELECT KundID FROM Kundinfo WHERE Email = '$email'";
+	$KundID = mysqli_fetch_assoc(mysqli_query($conn, $KundID));
+		
 		session_start();
-		$_SESSION['logged in'] = $email;
+		$_SESSION['KundID'] = $KundID;
+		
+	
 
 
 

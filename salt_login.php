@@ -18,14 +18,16 @@
 		}
 	}
 
-
+	$KundID = "SELECT KundID FROM Kundinfo WHERE Email = '$email'";
+	$KundID = mysqli_fetch_assoc(mysqli_query($conn, $KundID));
+	
 	if ($salt_password == $db_password["Losenord"]){
 		echo '<script language="javascript">';
 		echo 'alert("Logged in");';
-		echo 'window.location.href="index.php";';
+		echo 'window.location.href="index.php";'; //ska vara index
 		echo '</script>';
 		session_start();
-		$_SESSION['logged in'] = $email;
+		$_SESSION['KundID'] = $KundID;
 		
 		}
 	else{
