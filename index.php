@@ -70,37 +70,36 @@ session_start();
 
             </form>
             
-        
-            <div id="taggar">             
-                <button class="orangeKnapp" type="button" onclick="moveNumbers(this.innerHTML)">#TAGG1</button>
-                <button class="orangeKnapp" type="button" onclick="moveNumbers(this.innerHTML)">#TAGG2</button>
-                <button class="orangeKnapp" type="button" onclick="moveNumbers(this.innerHTML)">#TAGG3</button>
-                <button class="orangeKnapp" type="button" onclick="moveNumbers(this.innerHTML)">#TAGG4</button>
-                <button class="orangeKnapp" type="button" onclick="moveNumbers(this.innerHTML)">#TAGG5</button>
-                <button class="orangeKnapp" type="button" onclick="moveNumbers(this.innerHTML)">#TAGG6</button>
-                <button class="orangeKnapp" type="button" onclick="moveNumbers(this.innerHTML)">#TAGG7</button>
-                <button class="orangeKnapp" type="button" onclick="moveNumbers(this.innerHTML)">#TAGG8</button>
-                <button class="orangeKnapp" type="button" onclick="moveNumbers(this.innerHTML)">#TAGG9</button>
-                <button class="orangeKnapp" type="button" onclick="moveNumbers(this.innerHTML)">#TAGG10</button>                   
-				<button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>                 
-				<button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>                 
-				<button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
-                <button class="orangeKnapp" type="button">#TAGG</button>
+        <div id="taggar">
+                
+	<?php
+
+		$servername = "dbtrain.im.uu.se";
+		$username = "dbtrain_575";
+		$password = "dksdpt";
+	
+		$conn = new mysqli($servername, $username, $password, $username);
+		
+		if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+		$query = 'SELECT Taggnamn FROM Taggar';
+  
+		$result = $conn->query($query);
+	
+		if ($result->num_rows > 0) {
+    // output data of each row
+			while($row = $result->fetch_assoc()) {
+        		echo '<button class="orangeKnapp" type="button" onclick="moveNumbers(this.innerHTML)">';
+				echo $row['Taggnamn'];
+				echo '</button>';
+			}
+		} else {
+			echo "0 results";
+		}
+    ?>
+                
             </div>
 
         </div>
