@@ -13,7 +13,9 @@ $sql = "SELECT KundID FROM Kundinfo WHERE email = '$email'";
 	if(!$conn){
 		echo '<script language="javascript">';
 		echo 'alert("Failed to post");';
+
 		echo 'window.location.href="index.php";';
+
 		}
 		else {
 		echo '<script language="javascript">';
@@ -24,8 +26,9 @@ $sql = "SELECT KundID FROM Kundinfo WHERE email = '$email'";
 		}
 	
 	
-	
+
 	header('Location: index.php');
+
 }
 
 	?>

@@ -32,6 +32,8 @@
 		$inlagg_name = $row['inlogg'];
 		$inlagg_text = $row['inlagg'];
 		echo '<div>';
+
+		echo '';
 		echo "$inlagg_name : <br> $inlagg_text<p>";
 		echo '</div>';
 	}
