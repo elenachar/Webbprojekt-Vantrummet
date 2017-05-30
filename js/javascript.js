@@ -13,7 +13,6 @@ function moveNumbers(tagg) {
     var taggar = [];
     
     doldInput.setAttribute('type', 'hidden');
-	doldInput.setAttribute('id', 'sokord');
     doldInput.setAttribute('name', element.getAttribute('data-name'));
     
     huvudinput.setAttribute('type', 'text');
@@ -84,7 +83,7 @@ function moveNumbers(tagg) {
     }
     
     function filtreraTagg(tagg) {
-        return tagg.replace(/[^\w]/g, '').trim();
+        return tagg.replace(/[^\wåäöÅÄÖ-]/g, '').trim();
     }    
 });
 
