@@ -1,0 +1,195 @@
+body {
+    background-image: url(light_grey.png);
+    background-attachment: fixed;
+}
+
+#flöde {
+    font-size: 100%;
+    width: 80%;
+    background-color: rgb(255, 255, 255, 0.3);
+    margin-left: 10%;
+}
+
+textarea[placeholder], input, button, body {
+    font-family: Georgia;
+}
+
+.omOss {
+    padding: 10% 20% 30px 20%; /* Top Right Bottom Left */
+    font-style: italic;
+}
+
+textarea[placeholder], input, body {
+    font-family: georgia;
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+/*#meny {
+    clear: both;
+    position: relative;
+    width: 70%;
+    height: 15%;
+    max-width: 500px;
+    margin-left: 15%;
+    padding-top: 15%;
+    padding-bottom: 5%;
+}*/
+
+.icon {
+    display: inline-block;
+    width: 20%;
+    margin: 
+}
+
+.icon:hover, icon:active {
+}
+
+#loginIcon {
+    float: right;
+    margin-right: 4%;
+    width: 35px;
+}
+
+#chairIcon {
+    float: left;
+    max-width: 200px;
+    opacity: 0.4;
+}
+
+h1 {
+    position: absolute;
+    margin: 3px 25px;
+    font-size: 4em;
+    font-family: 'Cabin Sketch', cursive;
+    color: #ff7733;
+    opacity: 1;
+    z-index: 1;
+}
+
+input[type=text, type=email, type=password] {
+    width: 60%;
+	height:auto;
+    padding: 12px 20px;
+}
+   
+
+.sökfält {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1em;
+    color: lightgray;
+    background-color: white;
+    border: 0.1em solid #ccc;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.sökfält .tagg {
+    padding: 0.25em 0.5em;
+    margin: 0.25em 0em 0.25em 0.25em;
+    display: inline-block;
+    border: 0.1em solid lightgray;
+    border-radius: 4px;
+    transition: all 0.1s linear;
+}
+
+.sökfält .tagg:hover {
+    border-color: gray;
+    color: gray;
+    cursor: pointer;
+}
+
+.sökfält .tagg .stäng::after {
+    content: 'x';
+    font-weight: lighter;
+    display: inline-block;
+    transform: scale(1.4);
+    margin-left: 0.5em;
+}
+
+.sökfält .tagg .stäng:hover::after {
+    content: 'X';
+    font-weight: bold;
+}
+
+.textinput {
+    border: none;
+    outline: none;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1em;
+    text-align: left;
+    color: gray;
+    margin: 0.5em 0em;
+    padding-left: 0.5em;
+}
+
+#taggar {
+    width: 86%;
+    margin-left: 7%;
+}
+
+input[type=submit], button {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1em;
+    border: 0.1em;
+    border-style: solid;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.orangeKnapp {
+    background-color: rgb(255, 255, 255, 0.5);
+    color: #ffbf80;
+    border-color: #ffbf80;
+    border-radius: 20px;
+    margin: 2.5px 0px;
+    padding: 5px 10px;
+}
+
+.orangeKnapp:hover {
+    background-color: #ffbf80;
+    color: white;
+}
+
+.svartKnapp {
+    width: 5%;
+    margin-left: -10px;
+    background-color: lightgray;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 2%;
+    padding: 10px 20px;
+}
+
+.svartKnapp:hover {
+    background-color: white;
+    color: lightgray;
+}
+
+@media only screen and (max-width: 800px) {
+
+    h1 { font-size: 2.9em; }
+    #chairIcon { max-width: 150px; }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    h1 { font-size: 2em; }
+    #chairIcon { max-width: 100px; }
+}
+
+.inlagg {
+	width: 50%;
+	height:100px;
+    padding: 12px 20px;
+	margin:3%;
+
+
+ }
